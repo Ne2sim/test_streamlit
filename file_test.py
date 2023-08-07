@@ -77,8 +77,8 @@ with st.sidebar:
     st.write(position+" Template")
     st.markdown('<h1 style="font-family: Consolas; font-size: 34px;">..And Let The Magic Happen ➡️</h1>', unsafe_allow_html=True)
 
-#Extract age, ready to merge
-'''age = df[['Player','True Age', 'Minutes Played']]
+'''#Extract age, ready to merge
+age = df[['Player','True Age', 'Minutes Played']]
 age.rename(columns = {'True Age':'Age'},inplace = True)
 
 # Note that `select_dtypes` returns a data frame. We are selecting only the columns
@@ -185,7 +185,7 @@ params = [y[:-5] for y in params]
 
 #get roles
 roles = list(df.columns)
-roles = roles[-3:]
+roles = roles[-3:]'''
 
 #######################################################################
 
