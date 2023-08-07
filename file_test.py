@@ -101,7 +101,7 @@ def CB_Rating(df):
 
 #######################################################################
 
-if not df.empty and 'Position' in df.columns and len(df['Position']) > 0:
+'''if not df.empty and 'Position' in df.columns and len(df['Position']) > 0:
     if df['Position'].iloc[0] == 'Centre-Back':
         df = CB_Rating(df)
         df = pd.merge(df, age, on="Player")
@@ -110,7 +110,7 @@ if not df.empty and 'Position' in df.columns and len(df['Position']) > 0:
         df = df[['Player','True Position','Age','Squad','League']]
 
 #######################################################################
-df = df[['Player','True Position','Age','Squad']]
+df = df[['Player','True Position','Age','Squad']]'''
 
 '''# Normalize the data using z-score scaling (standardization)
 scaler = StandardScaler()
