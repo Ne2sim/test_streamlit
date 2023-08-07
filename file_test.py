@@ -78,7 +78,7 @@ with st.sidebar:
     st.markdown('<h1 style="font-family: Consolas; font-size: 34px;">..And Let The Magic Happen ➡️</h1>', unsafe_allow_html=True)
 
 #Extract age, ready to merge
-age = df[['Player','True Age', 'Minutes Played']]
+'''age = df[['Player','True Age', 'Minutes Played']]
 age.rename(columns = {'True Age':'Age'},inplace = True)
 
 # Note that `select_dtypes` returns a data frame. We are selecting only the columns
@@ -90,7 +90,7 @@ x = df[numeric_cols]
 min_max_scaler = preprocessing.MinMaxScaler()
 x_scaled = min_max_scaler.fit_transform(x)
 x_scaled = x_scaled *100
-df[numeric_cols] = pd.DataFrame(x_scaled)
+df[numeric_cols] = pd.DataFrame(x_scaled)'''
 
 #######################################################################
 
@@ -159,7 +159,7 @@ Age = top_7_similar_players['Age'].values[0]'''
 #######################################################################
 
 #Filter for player
-df = df.loc[(df['Player'] == player)].reset_index(drop= True)
+'''df = df.loc[(df['Player'] == player)].reset_index(drop= True)
 
 #add ranges to list of tuple pairs
 values = []
