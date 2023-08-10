@@ -6,7 +6,7 @@
 #Packages
 import pandas as pd
 import numpy as np
-import ipywidgets as widgets
+#import ipywidgets as widgets
 #import matplotlib.pyplot as plt
 import warnings
 import streamlit as st
@@ -64,7 +64,9 @@ if 1==1:
 		user_input_base = st.selectbox("File type", file_types, key='user_input_base')
 
 		if user_input_base == 'CSV':
-			filepath_csv_base = st.text_input('Filepath', '/path/to/file', key='filepath_csv_base')
+			#filepath_csv_base = st.text_input('Filepath', '/path/to/file', key='filepath_csv_base')
+			filepath_csv_base = st.file_uploader("Upload a file", type=("csv"))
+
 			c1_base, c2_base, c3_base, c4_base = st.columns(4)
 
 			with c1_base:
