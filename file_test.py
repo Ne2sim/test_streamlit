@@ -344,7 +344,7 @@ if len(df_base)>0 and len(df_plus)>0:
 							writer.close()
 
 						st.download_button(
-						   label="Download data as Excel",
+						   label="Download as Excel",
 						   data=buffer,
 						   file_name='df_merged.xlsx',
 						   mime='application/vnd.ms-excel'
@@ -353,7 +353,7 @@ if len(df_base)>0 and len(df_plus)>0:
 						csv = df_merged.to_csv(index=False).encode('utf-8')
 
 						st.download_button(
-						   "Press to Download",
+						   "Download as CSV",
 						   csv,
 						   "file.csv",
 						   "text/csv",
