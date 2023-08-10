@@ -147,22 +147,20 @@ if 1==1:
 			with c2_plus:
 				header_types = ['Yes','No']
 				header_csv_plus = st.selectbox("First line as header", header_types, key='header_csv_plus')
-				match header_csv_plus:
-					case 'Yes':
+				if header_csv_plus == 'Yes':
 						header_csv_plus = 0
-					case 'No':
+				elif header_csv_plus == 'No':
 						header_csv_plus = None
 			with c3_plus:
 				quote_types = ['No quotes','Non-numeric only','All','Minimal']
 				quoting_plus = st.selectbox("Quoting", quote_types, key='quoting_plus')
-				match quoting_plus:
-					case 'Minimal':
+				if quoting_plus == 'Minimal':
 						quoting_plus = 0
-					case 'All':
+				elif quoting_plus == 'All':
 						quoting_plus = 1
-					case 'Non-numeric only':
+				elif quoting_plus == 'Non-numeric only':
 						quoting_plus = 2
-					case 'No quotes':
+				elif quoting_plus == 'No quotes':
 						quoting_plus = 3
 				if quoting_plus < 3:
 					with c4_plus:
