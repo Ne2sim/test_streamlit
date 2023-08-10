@@ -64,8 +64,8 @@ if 1==1:
 		user_input_base = st.selectbox("File type", file_types, key='user_input_base')
 
 		if user_input_base == 'CSV':
-			filepath_csv_base = st.text_input('Filepath', '/path/to/file', key='filepath_csv_base')
-			#filepath_csv_base = st.file_uploader("Upload a file", type=("csv"), key='filepath_csv_base')
+			#filepath_csv_base = st.text_input('Filepath', '/path/to/file', key='filepath_csv_base')
+			filepath_csv_base = st.file_uploader("Upload a file", type=("csv"), key='filepath_csv_base')
 
 			c1_base, c2_base, c3_base, c4_base = st.columns(4)
 
@@ -107,8 +107,8 @@ if 1==1:
 			#filepath = "/Users/nessim/Desktop/Projects/Streamlit/VlookUpOnline/data_test.csv"
 			#filepath = "/Users/nessim/Desktop/Projects/Crypto Bot/3. Tracking/master_2021-09-29_20_37_11.xlsx"
 
-			filepath_xls_base = st.text_input('Filepath', '/path/to/file', key='filepath_xls_base')
-			#filepath_xls_base = st.file_uploader("Upload a file", type=("xlsx"), key='filepath_xls_base')
+			#filepath_xls_base = st.text_input('Filepath', '/path/to/file', key='filepath_xls_base')
+			filepath_xls_base = st.file_uploader("Upload a file", type=("xlsx"), key='filepath_xls_base')
 			
 			#c1, c2, c3 = st.columns(3)
 
@@ -125,10 +125,10 @@ if 1==1:
 
 			#usecols = cell[:1]
 			#userows = int(cell[1:])
-			#try:
-			df_base = pd.read_excel(filepath_xls_base,sheet_name=sheet_base)
-			#except:
-			#	pass	
+			try:
+				df_base = pd.read_excel(filepath_xls_base,sheet_name=sheet_base)
+			except:
+				pass	
 
 		with st.expander("Preview"):
 			if len(df_base)>0:
@@ -145,8 +145,8 @@ if 1==1:
 		user_input_plus = st.selectbox("File type", file_types, key='user_input_plus')
 
 		if user_input_plus == 'CSV':
-			filepath_csv_plus = st.text_input('Filepath', '/path/to/file', key='filepath_csv_plus')
-			#filepath_csv_plus = st.file_uploader("Upload a file", type=("csv"), key='filepath_csv_plus')
+			#filepath_csv_plus = st.text_input('Filepath', '/path/to/file', key='filepath_csv_plus')
+			filepath_csv_plus = st.file_uploader("Upload a file", type=("csv"), key='filepath_csv_plus')
 			c1_plus, c2_plus, c3_plus, c4_plus = st.columns(4)
 
 			with c1_plus:
@@ -186,8 +186,8 @@ if 1==1:
 		elif user_input_plus == 'Excel':
 			#filepath = "/Users/nessim/Desktop/Projects/Streamlit/VlookUpOnline/data_test.csv"
 			#filepath = "/Users/nessim/Desktop/Projects/Crypto Bot/3. Tracking/master_2021-09-29_20_37_11.xlsx"
-			filepath_xls_plus = st.text_input('Filepath', '/path/to/file', key='filepath_xls_plus')
-			#filepath_xls_plus = st.file_uploader("Upload a file", type=("xlsx"), key='filepath_xls_plus')
+			#filepath_xls_plus = st.text_input('Filepath', '/path/to/file', key='filepath_xls_plus')
+			filepath_xls_plus = st.file_uploader("Upload a file", type=("xlsx"), key='filepath_xls_plus')
 			#c1, c2, c3 = st.columns(3)
 
 			#with c1:
