@@ -10,7 +10,7 @@ import numpy as np
 #import matplotlib.pyplot as plt
 import warnings
 import streamlit as st
-from streamlit import components
+#from streamlit import components
 import os
 import io
 
