@@ -79,15 +79,14 @@ if 1==1:
 			with c3_base:
 				quote_types = ['No quotes','Non-numeric only','All','Minimal']
 				quoting_base = st.selectbox("Quoting", quote_types, key='quoting_base')
-				match quoting_base:
-					case 'Minimal':
-						quoting_base = 0
-					case 'All':
-						quoting_base = 1
-					case 'Non-numeric only':
-						quoting_base = 2
-					case 'No quotes':
-						quoting_base = 3
+				if quoting_base == 'Minimal':
+					quoting_base = 0
+				elif quoting_base == 'All':
+					quoting_base = 1
+				elif quoting_base == 'Non-numeric only':
+					quoting_base = 2
+				elif quoting_base == 'No quotes':
+					quoting_base = 3
 				if quoting_base < 3:
 					with c4_base:
 						quotechar_base = st.text_input('Quote character', '', key='quotechar_base')
