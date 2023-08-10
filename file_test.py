@@ -13,6 +13,7 @@ import streamlit as st
 #from streamlit import components
 import os
 import io
+import xlsxwriter
 
 # buffer to use for excel writer
 buffer = io.BytesIO()
