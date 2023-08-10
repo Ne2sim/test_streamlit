@@ -6,7 +6,7 @@
 #Packages
 import pandas as pd
 import numpy as np
-#import ipywidgets as widgets
+import ipywidgets as widgets
 #import matplotlib.pyplot as plt
 import warnings
 import streamlit as st
