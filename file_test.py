@@ -125,10 +125,10 @@ if 1==1:
 
 			#usecols = cell[:1]
 			#userows = int(cell[1:])
-			try:
-				df_base = pd.read_excel(filepath_xls_base,sheet_name=sheet_base)
-			except:
-				pass	
+			#try:
+			df_base = pd.read_excel(filepath_xls_base,sheet_name=sheet_base)
+			#except:
+			#	pass	
 
 		with st.expander("Preview"):
 			if len(df_base)>0:
