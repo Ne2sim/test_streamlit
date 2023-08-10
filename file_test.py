@@ -112,6 +112,7 @@ if 1==1:
 
 			#with c1:
 			sheet_base = st.text_input('Sheet', 'Sheet1', key='sheet_base')
+			#sheet_base = st.selectbox('Sheets',xl.sheet_names)
 			#with c2:
 			#	cell = st.text_input('Starting cell', 'A1:')
 			#with c3:
@@ -122,10 +123,11 @@ if 1==1:
 
 			#usecols = cell[:1]
 			#userows = int(cell[1:])
-			try:
-				df_base = pd.read_excel(filepath_xls_base,sheet_name=sheet_base)
-			except:
-				pass	
+			#try:
+			df_base = pd.read_excel(filepath_xls_base,sheet_name=sheet_base)
+			st.write(df_base.sheet_names)
+			#except:
+			#	pass	
 
 		with st.expander("Preview"):
 			if len(df_base)>0:
