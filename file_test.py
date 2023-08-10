@@ -72,11 +72,10 @@ if 1==1:
 			with c2_base:
 				header_types = ['Yes','No']
 				header_csv_base = st.selectbox("First line as header", header_types, key='header_csv_base')
-				match header_csv_base:
-					case 'Yes':
-						header_csv_base = 0
-					case 'No':
-						header_csv_base = None
+				if header_csv_base == 'Yes':
+					header_csv_base = 0
+				elif header_csv_base == 'No':
+					header_csv_base = None
 			with c3_base:
 				quote_types = ['No quotes','Non-numeric only','All','Minimal']
 				quoting_base = st.selectbox("Quoting", quote_types, key='quoting_base')
