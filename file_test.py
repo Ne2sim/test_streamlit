@@ -319,7 +319,7 @@ if len(df_base)>0 and len(df_plus)>0:
 					st.dataframe(df_merged,use_container_width=True)
 
 		with st.expander("Download"):
-				st.markdown(f"""You need a token to download your file, if you don't have one you can [get it there]({'https://www.lequipe.fr/Directs'})""")
+				st.markdown(f"""You need a token to download your file, if you don't have one you can [get it there]({'https://buy.stripe.com/dR616a2Mx6QH8jC7ss'})""")
 				with st.form("login_form"):
 					token = st.text_input('If you already have a token, enter it below 👇')
 					#password = st.text_input('Enter Your Password')
@@ -327,7 +327,7 @@ if len(df_base)>0 and len(df_plus)>0:
 
 
 				if submitted:
-					if token == 'token':#config('SECRET_PASSWORD'):
+					if token == 'token' or token == 'noexcel2k23':#config('SECRET_PASSWORD'):
 						st.session_state['logged_in'] = True
 						st.text('Your token is valid!')
 					else:
