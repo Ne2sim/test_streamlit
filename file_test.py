@@ -61,12 +61,12 @@ if 1==1:
 
 		df_base = pd.DataFrame()
 
-		file_types = ['Excel','CSV']
+		file_types = ['Excel','CSV and other text files']
 		user_input_base = st.selectbox("File type", file_types, key='user_input_base')
 
-		if user_input_base == 'CSV':
+		if user_input_base == 'CSV and other text files':
 			#filepath_csv_base = st.text_input('Filepath', '/path/to/file', key='filepath_csv_base')
-			filepath_csv_base = st.file_uploader("Upload a file", type=("csv"), key='filepath_csv_base')
+			filepath_csv_base = st.file_uploader("Upload a file", type=("csv","txt","tsv"), key='filepath_csv_base')
 
 			c1_base, c2_base, c3_base, c4_base = st.columns(4)
 
@@ -145,9 +145,9 @@ if 1==1:
 		#file_types = ['Excel','CSV']
 		user_input_plus = st.selectbox("File type", file_types, key='user_input_plus')
 
-		if user_input_plus == 'CSV':
+		if user_input_plus == 'CSV and other text files':
 			#filepath_csv_plus = st.text_input('Filepath', '/path/to/file', key='filepath_csv_plus')
-			filepath_csv_plus = st.file_uploader("Upload a file", type=("csv"), key='filepath_csv_plus')
+			filepath_csv_plus = st.file_uploader("Upload a file", type=("csv","txt","tsv"), key='filepath_csv_plus')
 			c1_plus, c2_plus, c3_plus, c4_plus = st.columns(4)
 
 			with c1_plus:
@@ -319,7 +319,10 @@ if len(df_base)>0 and len(df_plus)>0:
 					st.dataframe(df_merged,use_container_width=True)
 
 		with st.expander("Download"):
-				st.markdown(f"""You need a token to download your file, if you don't have one you can [get it there]({'https://buy.stripe.com/dR616a2Mx6QH8jC7ss'})""")
+				st.markdown(f"""You need a token to download your file, if you don't have one you can [get it there]({'https://donate.stripe.com/14k9CGgDngrh9nG145'})""")
+				st.markdown(f"""If this page rendered you a service, you can pay the amount you want to get the token starting from 0,50€ 🙏""")
+				st.markdown(f"""The token is then usable for life, without date limitation ❤️""")
+				st.markdown(f"""Be watchful, the token is written in the confirmation message after payment 👀""")
 				with st.form("login_form"):
 					token = st.text_input('If you already have a token, enter it below 👇')
 					#password = st.text_input('Enter Your Password')
@@ -327,7 +330,7 @@ if len(df_base)>0 and len(df_plus)>0:
 
 
 				if submitted:
-					if token == 'token' or token == 'noexcel2k23':#config('SECRET_PASSWORD'):
+					if token == '144f8140a4e8ec37b9cde1812cfd4048dd28c2e4639d9c5f8f4fff8b24a9aac5':#config('SECRET_PASSWORD'):
 						st.session_state['logged_in'] = True
 						st.text('Your token is valid!')
 					else:
