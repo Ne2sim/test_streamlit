@@ -332,7 +332,7 @@ if len(df_base)>0 and len(df_plus)>0:
 				if submitted:
 					if token == '144f8140a4e8ec37b9cde1812cfd4048dd28c2e4639d9c5f8f4fff8b24a9aac5':#config('SECRET_PASSWORD'):
 						st.session_state['logged_in'] = True
-						st.text('Your token is valid!')
+						st.text('Your token is valid! Download links will appear below in a few seconds ⌛')
 					else:
 						st.text('Unknown or expired token')
 						st.session_state['logged_in'] = False
